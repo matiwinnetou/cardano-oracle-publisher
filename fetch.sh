@@ -11,7 +11,7 @@ COINGECKOERGUSD=$(curl -s "https://api.coingecko.com/api/v3/coins/ergo?localizat
 COINGECKOADABTC=$(curl -s "https://api.coingecko.com/api/v3/coins/cardano?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false" | jq '.market_data.current_price.btc')
 COINGECKOBTCUSD=$(curl -s "https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false" | jq '.market_data.current_price.usd')
 
-TESLASTOCKPRICE=$(curl -s "http://api.marketstack.com/v1/intraday/latest?access_key=d7b2c35197724da1541bd0c484c6c1fa&symbols=TSLA" | jq '.data[].last');
+TESLASTOCKPRICE=$(curl -s "http://api.marketstack.com/v1/intraday/latest?access_key=??????&symbols=TSLA" | jq '.data[].last');
 
 #BTCDIFF=$(curl -s "https://chain.api.btc.com/v3/block/latest" | jq '.data.difficulty')
 BTCDIFF=$(curl -s "https://btc1.trezor.io/api/v2" | jq -r '.backend.difficulty')
