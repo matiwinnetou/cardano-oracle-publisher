@@ -75,5 +75,5 @@ crontab -e
 ```
 
 ```
-0 * * * * cardano-oracle-publisher/post.sh  
+0 * * * * cardano-oracle-publisher/post-oracle-data.sh  
 ```
