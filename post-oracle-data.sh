@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e
+cd /tmp
 echo `date` Waking up...
 export CARDANO_NODE_SOCKET_PATH=/run/cardano-node/node.socket
 UTXOS=$(cardano-cli query utxo --address `cat /etc/secrets/mywallet.addr` --mainnet --allegra-era |  grep "^[^- ]" | sort -k 2n | tail -1)
