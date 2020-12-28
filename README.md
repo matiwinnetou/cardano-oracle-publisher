@@ -15,7 +15,7 @@ These oracles are needed for DeFi and for smart contracts, they for cases where 
 ## How to use oracle publisher?
 
 To contribute to decentralization of the network one has to first configure metadata oracle publisher. That configuration consists of several steps:
-- setup full / passive Cardano > 1.24.2 node
+- setup full / passive Cardano >= 1.24.1 node
 - configure oracle metadata file
 - get personal access keys for oracles
 - generate oracle file
