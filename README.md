@@ -24,7 +24,7 @@ To contribute to decentralization of the network one has to first configure meta
 - optionally add your own oracles
 
 ## Requirements
-- Full cardano passive node > 1.24.2 synced with the main blockchain
+- Full cardano passive node >= 1.24.1 synced with the main blockchain
 - local generated cardano address
 - linux distro of choice
 
