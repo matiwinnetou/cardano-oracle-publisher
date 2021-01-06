@@ -6,7 +6,7 @@ COIN_GECKO_BTC_JSON=$(curl -s 'https://api.coingecko.com/api/v3/coins/bitcoin?lo
 COIN_GECKO_AGI_JSON=$(curl -s 'https://api.coingecko.com/api/v3/coins/singularitynet?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false')
 COIN_GECKO_ERGO_JSON=$(curl -s 'https://api.coingecko.com/api/v3/coins/ergo?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false')
 
-CRYPTO_COMPARE_JSON=$(curl -s 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=ADA,BTC,AGI&tsyms=BTC,USD,EUR&api_key=?')
+CRYPTO_COMPARE_JSON=$(curl -s 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=ADA,BTC,AGI&tsyms=BTC,USD,EUR&api_key=???')
 ERGO_POOL_ADA_USD_JSON=$(curl -s "https://ada-usd-ergo-oracle.emurgo.io/frontendData" | sed -e 's/^.//' -e 's/.$//' -e 's/\\//g')
 ERGO_POOL_ERG_USD_JSON=$(curl -s "https://erg-usd-ergo-oracle.emurgo.io/frontendData" | sed -e 's/^.//' -e 's/.$//' -e 's/\\//g')
 MARKET_STACK_JSON=$(curl -s "http://api.marketstack.com/v1/intraday/latest?access_key=???&symbols=TSLA");
