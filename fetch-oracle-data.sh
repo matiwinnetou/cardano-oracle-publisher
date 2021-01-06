@@ -9,7 +9,7 @@ COIN_GECKO_ERGO_JSON=$(curl -s 'https://api.coingecko.com/api/v3/coins/ergo?loca
 CRYPTO_COMPARE_JSON=$(curl -s 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=ADA,BTC,AGI&tsyms=BTC,USD,EUR&api_key=3ac2bcc4d5ca254f38c40d6da30feeccf5788d292a25f3f06b6242a4300bd352')
 ERGO_POOL_ADA_USD_JSON=$(curl -s "https://ada-usd-ergo-oracle.emurgo.io/frontendData" | sed -e 's/^.//' -e 's/.$//' -e 's/\\//g')
 ERGO_POOL_ERG_USD_JSON=$(curl -s "https://erg-usd-ergo-oracle.emurgo.io/frontendData" | sed -e 's/^.//' -e 's/.$//' -e 's/\\//g')
-MARKET_STACK_JSON=$(curl -s "http://api.marketstack.com/v1/intraday/latest?access_key=d7b2c35197724da1541bd0c484c6c1fa&symbols=TSLA");
+MARKET_STACK_JSON=$(curl -s "http://api.marketstack.com/v1/intraday/latest?access_key=???&symbols=TSLA");
 BTC_TREZOR_JSON=$(curl -s "https://btc1.trezor.io/api/v2")
 
 DRAND=$(curl -s "https://api.drand.sh/public/latest" | jq 'del(.signature)' | jq 'del(.previous_signature)')
