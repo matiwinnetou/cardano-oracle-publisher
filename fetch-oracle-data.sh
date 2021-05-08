@@ -12,6 +12,8 @@ ERGO_POOL_ERG_USD_JSON=$(curl -s "https://erg-usd-ergo-oracle.emurgo.io/frontend
 MARKET_STACK_JSON=$(curl -s "http://api.marketstack.com/v1/intraday/latest?access_key=???&symbols=TSLA");
 BTC_TREZOR_JSON=$(curl -s "https://btc1.trezor.io/api/v2")
 
+SOFR_JSON=$(curl -s 'https://markets.newyorkfed.org/api/rates/secured/sofr/last/1.json')
+
 DRAND=$(curl -s "https://api.drand.sh/public/latest" | jq 'del(.signature)' | jq 'del(.previous_signature)')
 
 echo "{"
@@ -90,6 +92,12 @@ echo "    \"TSLA\": ["
 echo "       {"
 echo "         \"value\": \"$(jq '.data[].last' <<< "$MARKET_STACK_JSON")\","
 echo "         \"source\": \"investorsExchange\""
+echo "       }"
+echo "    ],"
+echo "    \"SOFR\": ["
+echo "       {"
+echo "         \"value\": \"$(jq '.refRates[].percentRate' <<< "$SOFR_JSON")\","
+echo "         \"source\": \"newYorkFed\""
 echo "       }"
 echo "    ],"
 echo "    \"DRAND\": $DRAND"
